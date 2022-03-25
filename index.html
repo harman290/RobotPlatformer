@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Robot Platformer</title>
+	<script src="phaser.min.js"></script>
+	<script src="src\Boot.js"></script>
+	<script src="src\MainMenu.js"></script>
+	<script src="src\WinnerMenu.js"></script>
+	<script src="src\LooserMenuLevel1.js"></script>
+	<script src="src\LooserMenuLevel2.js"></script>
+	<script src="src\LooserMenuLevel3.js"></script>
+	<script src="src\LooserMenuLevel4.js"></script>
+	<script src="src\LooserMenuLevel5.js"></script>
+	<script src="src\NextLevel2Menu.js"></script>
+	<script src="src\NextLevel3Menu.js"></script>
+	<script src="src\NextLevel4Menu.js"></script>
+	<script src="src\NextLevel5Menu.js"></script>
+	<script src="src\level1.js"></script>
+	<script src="src\level2.js"></script>
+	<script src="src\level3.js"></script>
+	<script src="src\level4.js"></script>
+	<script src="src\level5.js"></script>
+</head>
+<body>
+<div id="gameContainer"></div>
+
+<script type="text/javascript">
+
+//code for loading all of the game states and pages
+	window.onload = function() {
+	var game = new Phaser.Game(1700, 900, Phaser.AUTO, 'gameContainer');
+        game.state.add('Boot', BasicGame.Boot);
+		game.state.add('MainMenu', BasicGame.MainMenu);
+		game.state.add('WinnerMenu', BasicGame.WinnerMenu);
+		game.state.add('LooserMenuLevel1', BasicGame.LooserMenuLevel1);
+        game.state.add('LooserMenuLevel2', BasicGame.LooserMenuLevel2);
+		game.state.add('LooserMenuLevel3', BasicGame.LooserMenuLevel3);
+        game.state.add('LooserMenuLevel4', BasicGame.LooserMenuLevel4);
+        game.state.add('LooserMenuLevel5', BasicGame.LooserMenuLevel5);
+		game.state.add('NextLevel2Menu', BasicGame.NextLevel2Menu);
+		game.state.add('NextLevel3Menu', BasicGame.NextLevel3Menu);
+        game.state.add('NextLevel4Menu', BasicGame.NextLevel4Menu);
+        game.state.add('NextLevel5Menu', BasicGame.NextLevel5Menu);
+		game.state.add('level1', BasicGame.level1);
+		game.state.add('level2', BasicGame.level2);
+		game.state.add('level3', BasicGame.level3);
+        game.state.add('level4', BasicGame.level4);
+		game.state.add('level5', BasicGame.level5);
+
+//code for Starting the game loader
+    game.state.start('Boot');
+};
+</script>
+
+</body>
+</html>
